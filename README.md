@@ -23,7 +23,6 @@ conter os seguintes elementos:
 ## Requisitos
 
 * Ser escrito em Swift
-* Deve ter injeção de dependência com Swinject
 * Testes Unitários (preferencialmente com Quick, Nimble, Cuckoo e OHHTTPStubs)
 * Clean Architecture (MVP ou MVVM)
 * Chamadas de REST com Alamofire/Moya
