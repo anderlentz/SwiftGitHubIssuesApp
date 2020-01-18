@@ -10,7 +10,7 @@
         <!--Issues-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Issues" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IssuesViewController" id="BYZ-38-t0r" customClass="IssuesViewController" customModule="SwiftGithubIssuesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
         <!--Details-->
         <scene sceneID="rAl-ud-yB4">
             <objects>
-                <viewController id="aBf-Vr-dzE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IssueDetailViewController" id="aBf-Vr-dzE" customClass="IssueDetailViewController" customModule="SwiftGithubIssuesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xsm-Xk-aAo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
