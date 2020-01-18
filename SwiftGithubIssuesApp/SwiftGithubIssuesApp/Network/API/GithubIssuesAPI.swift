@@ -43,10 +43,28 @@ extension GithubIssuesApi: TargetType {
         switch self {
         case .issues:
             
-            guard let path2 = Bundle.main.path(forResource: "issues", ofType: "json"),
-                let data = NSData(contentsOfFile: path2) else { return Data() }
-        
-            return Data(referencing: data)
+            guard let path = Bundle.main.path(forResource: "issues", ofType: "json") else {return Data()}
+            
+                
+            do {
+                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+//                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+//
+//                print(jsonResult)
+//
+//                let results = try JSONDecoder().decode(Array<Issue>.self, from: data)
+//
+//
+//
+//                print("PASSOU === \n")
+                
+//                print(results)
+                return data
+            } catch let error{
+                print("Error \(error)")
+            }
+ 
+            return Data()
         }
     }
             

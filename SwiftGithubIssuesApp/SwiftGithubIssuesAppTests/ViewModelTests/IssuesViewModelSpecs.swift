@@ -10,18 +10,32 @@ import Foundation
 
 import Quick
 import Nimble
-
+import Moya
 @testable import SwiftGithubIssuesApp
 
 class IssuesViewModelSpecs: QuickSpec {
     
-    var issuesViewModel: IssuesViewModel?
+    var issuesViewModel: IssuesViewModel!
     
     override func spec() {
         describe("An IssuesViewModel") {
             context("After being initialized") {
                 beforeEach {
-                    self.issuesViewModel = IssuesViewModel()
+                    let issuesAPI = MoyaProvider<GithubIssuesApi>(stubClosure: MoyaProvider.immediatelyStub)
+                    self.issuesViewModel = IssuesViewModel(githubIssuesAPI: issuesAPI)
+                }
+                
+                
+                
+                it("should parse json into array containing one issue"){
+                    self.issuesViewModel.getIssues(){ result in
+                        switch result {
+                        case .success(let issues):
+                            expect(issues.count).to(equal(1))
+                        case .failure:
+                            fail("It was expect to parse issues json")
+                        }
+                    }
                 }
                 
             }
