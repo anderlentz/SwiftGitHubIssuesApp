@@ -1,0 +1,110 @@
+[
+  {
+    "url": "https://api.github.com/repos/apple/swift/issues/29302",
+    "repository_url": "https://api.github.com/repos/apple/swift",
+    "labels_url": "https://api.github.com/repos/apple/swift/issues/29302/labels{/name}",
+    "comments_url": "https://api.github.com/repos/apple/swift/issues/29302/comments",
+    "events_url": "https://api.github.com/repos/apple/swift/issues/29302/events",
+    "html_url": "https://github.com/apple/swift/pull/29302",
+    "id": 551805164,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzY0NDUxMzY3",
+    "number": 29302,
+    "title": "build: simplify, inline tool version recording",
+    "user": {
+      "login": "compnerd",
+      "id": 63311,
+      "node_id": "MDQ6VXNlcjYzMzEx",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/63311?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/compnerd",
+      "html_url": "https://github.com/compnerd",
+      "followers_url": "https://api.github.com/users/compnerd/followers",
+      "following_url": "https://api.github.com/users/compnerd/following{/other_user}",
+      "gists_url": "https://api.github.com/users/compnerd/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/compnerd/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/compnerd/subscriptions",
+      "organizations_url": "https://api.github.com/users/compnerd/orgs",
+      "repos_url": "https://api.github.com/users/compnerd/repos",
+      "events_url": "https://api.github.com/users/compnerd/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/compnerd/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2020-01-18T18:23:46Z",
+    "updated_at": "2020-01-18T18:24:05Z",
+    "closed_at": null,
+    "author_association": "COLLABORATOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/apple/swift/pulls/29302",
+      "html_url": "https://github.com/apple/swift/pull/29302",
+      "diff_url": "https://github.com/apple/swift/pull/29302.diff",
+      "patch_url": "https://github.com/apple/swift/pull/29302.patch"
+    },
+    "body": "This simplifies and inlines the version recording for the tools in use.\r\n\r\n<!-- What's in this pull request? -->\r\nReplace this paragraph with a description of your changes and rationale. Provide links to external references/discussions if appropriate.\r\n\r\n<!-- If this pull request resolves any bugs in the Swift bug tracker, provide a link: -->\r\nResolves SR-NNNN.\r\n\r\n<!--\r\nBefore merging this pull request, you must run the Swift continuous integration tests.\r\nFor information about triggering CI builds via @swift-ci, see:\r\nhttps://github.com/apple/swift/blob/master/docs/ContinuousIntegration.md#swift-ci\r\n\r\nThank you for your contribution to Swift!\r\n-->\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/apple/swift/issues/29301",
+    "repository_url": "https://api.github.com/repos/apple/swift",
+    "labels_url": "https://api.github.com/repos/apple/swift/issues/29301/labels{/name}",
+    "comments_url": "https://api.github.com/repos/apple/swift/issues/29301/comments",
+    "events_url": "https://api.github.com/repos/apple/swift/issues/29301/events",
+    "html_url": "https://github.com/apple/swift/pull/29301",
+    "id": 551803197,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzY0NDQ5OTY1",
+    "number": 29301,
+    "title": "build-script-impl: remove some build-script options",
+    "user": {
+      "login": "compnerd",
+      "id": 63311,
+      "node_id": "MDQ6VXNlcjYzMzEx",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/63311?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/compnerd",
+      "html_url": "https://github.com/compnerd",
+      "followers_url": "https://api.github.com/users/compnerd/followers",
+      "following_url": "https://api.github.com/users/compnerd/following{/other_user}",
+      "gists_url": "https://api.github.com/users/compnerd/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/compnerd/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/compnerd/subscriptions",
+      "organizations_url": "https://api.github.com/users/compnerd/orgs",
+      "repos_url": "https://api.github.com/users/compnerd/repos",
+      "events_url": "https://api.github.com/users/compnerd/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/compnerd/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2020-01-18T18:05:34Z",
+    "updated_at": "2020-01-18T18:05:51Z",
+    "closed_at": null,
+    "author_association": "COLLABORATOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/apple/swift/pulls/29301",
+      "html_url": "https://github.com/apple/swift/pull/29301",
+      "diff_url": "https://github.com/apple/swift/pull/29301.diff",
+      "patch_url": "https://github.com/apple/swift/pull/29301.patch"
+    },
+    "body": "<!-- What's in this pull request? -->\r\nReplace this paragraph with a description of your changes and rationale. Provide links to external references/discussions if appropriate.\r\n\r\n<!-- If this pull request resolves any bugs in the Swift bug tracker, provide a link: -->\r\nResolves SR-NNNN.\r\n\r\n<!--\r\nBefore merging this pull request, you must run the Swift continuous integration tests.\r\nFor information about triggering CI builds via @swift-ci, see:\r\nhttps://github.com/apple/swift/blob/master/docs/ContinuousIntegration.md#swift-ci\r\n\r\nThank you for your contribution to Swift!\r\n-->\r\n"
+  }
+]

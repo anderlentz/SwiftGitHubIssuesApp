@@ -40,7 +40,14 @@ extension GithubIssuesApi: TargetType {
     }
             
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .issues:
+            guard let path = Bundle.main.path(forResource: "issues", ofType: "json"),
+                let data = Data(base64Encoded: path) else {
+                    return Data()
+            }
+            return data
+        }
     }
             
     var task: Task {
