@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -76,8 +76,38 @@
 				B753796A1049611125D29256 /* Pods-SwiftGithubIssuesAppTests.debug.xcconfig */,
 				EBE07F4C051B7F596CF6A37E /* Pods-SwiftGithubIssuesAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A726F3B523D37D7100DD8A07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A75BD5A723D376FE002FE2CC /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A726F3B723D37D9200DD8A07 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A75BD5A323D376FE002FE2CC /* AppDelegate.swift */,
+				A75BD5A523D376FE002FE2CC /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A726F3B823D37DA400DD8A07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A726F3B923D37DAC00DD8A07 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A75BD59723D376FE002FE2CC = {
@@ -103,9 +133,10 @@
 		A75BD5A223D376FE002FE2CC /* SwiftGithubIssuesApp */ = {
 			isa = PBXGroup;
 			children = (
-				A75BD5A323D376FE002FE2CC /* AppDelegate.swift */,
-				A75BD5A523D376FE002FE2CC /* SceneDelegate.swift */,
-				A75BD5A723D376FE002FE2CC /* ViewController.swift */,
+				A726F3B823D37DA400DD8A07 /* Model */,
+				A726F3B523D37D7100DD8A07 /* View */,
+				A726F3B923D37DAC00DD8A07 /* ViewModel */,
+				A726F3B723D37D9200DD8A07 /* Support */,
 				A75BD5A923D376FE002FE2CC /* Main.storyboard */,
 				A75BD5AC23D37700002FE2CC /* Assets.xcassets */,
 				A75BD5AE23D37700002FE2CC /* LaunchScreen.storyboard */,
