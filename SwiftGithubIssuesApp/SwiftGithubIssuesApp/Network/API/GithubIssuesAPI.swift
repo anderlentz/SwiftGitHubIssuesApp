@@ -42,11 +42,11 @@ extension GithubIssuesApi: TargetType {
     var sampleData: Data {
         switch self {
         case .issues:
-            guard let path = Bundle.main.path(forResource: "issues", ofType: "json"),
-                let data = Data(base64Encoded: path) else {
-                    return Data()
-            }
-            return data
+            
+            guard let path2 = Bundle.main.path(forResource: "issues", ofType: "json"),
+                let data = NSData(contentsOfFile: path2) else { return Data() }
+        
+            return Data(referencing: data)
         }
     }
             

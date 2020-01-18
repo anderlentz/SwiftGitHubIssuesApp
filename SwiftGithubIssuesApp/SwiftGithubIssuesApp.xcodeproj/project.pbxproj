@@ -13,8 +13,8 @@
 		A726F3C023D381CC00DD8A07 /* IssuesViewModelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726F3BF23D381CC00DD8A07 /* IssuesViewModelSpecs.swift */; };
 		A726F3C223D3837800DD8A07 /* IssuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726F3C123D3837800DD8A07 /* IssuesViewModel.swift */; };
 		A726F3C623D3856D00DD8A07 /* GithubIssuesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726F3C523D3856D00DD8A07 /* GithubIssuesAPI.swift */; };
-		A726F3C823D38C4F00DD8A07 /* issues.json in Resources */ = {isa = PBXBuildFile; fileRef = A726F3C723D38C4F00DD8A07 /* issues.json */; };
 		A726F3CB23D38DBD00DD8A07 /* GithubIssuesApiSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726F3CA23D38DBD00DD8A07 /* GithubIssuesApiSpecs.swift */; };
+		A726F3CC23D3943C00DD8A07 /* issues.json in Resources */ = {isa = PBXBuildFile; fileRef = A726F3C723D38C4F00DD8A07 /* issues.json */; };
 		A75BD5A423D376FE002FE2CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75BD5A323D376FE002FE2CC /* AppDelegate.swift */; };
 		A75BD5A623D376FE002FE2CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75BD5A523D376FE002FE2CC /* SceneDelegate.swift */; };
 		A75BD5AB23D376FE002FE2CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75BD5A923D376FE002FE2CC /* Main.storyboard */; };
@@ -103,6 +103,7 @@
 		A726F3B723D37D9200DD8A07 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A726F3C723D38C4F00DD8A07 /* issues.json */,
 				A75BD5A323D376FE002FE2CC /* AppDelegate.swift */,
 				A75BD5A523D376FE002FE2CC /* SceneDelegate.swift */,
 			);
@@ -199,7 +200,6 @@
 				A726F3BE23D3817800DD8A07 /* ViewModelTests */,
 				A75BD5BA23D37700002FE2CC /* SwiftGithubIssuesAppTests.swift */,
 				A75BD5BC23D37700002FE2CC /* Info.plist */,
-				A726F3C723D38C4F00DD8A07 /* issues.json */,
 			);
 			path = SwiftGithubIssuesAppTests;
 			sourceTree = "<group>";
@@ -301,6 +301,7 @@
 				A75BD5B023D37700002FE2CC /* LaunchScreen.storyboard in Resources */,
 				A75BD5AD23D37700002FE2CC /* Assets.xcassets in Resources */,
 				A75BD5AB23D376FE002FE2CC /* Main.storyboard in Resources */,
+				A726F3CC23D3943C00DD8A07 /* issues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A726F3C823D38C4F00DD8A07 /* issues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
