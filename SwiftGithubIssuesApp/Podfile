@@ -12,7 +12,8 @@ target 'SwiftGithubIssuesApp' do
 
   # Pods for SwiftGithubIssuesApp
   pod 'Moya', '~> 13.0'
-
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'SwiftGithubIssuesAppTests' do
     inherit! :search_paths

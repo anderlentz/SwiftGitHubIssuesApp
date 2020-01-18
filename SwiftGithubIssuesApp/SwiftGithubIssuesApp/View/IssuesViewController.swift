@@ -7,13 +7,46 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class IssuesViewController: UIViewController {
+    
+    private let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var issuesTableView: UITableView!
+    let viewModel = IssuesViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //issuesTableView.delegate = self
+        //issuesTableView.dataSource = self
+        
+        //issuesTableView.rx.items(dataSource: <#T##_#>)
+        
+        viewModel.issues.bind(to: issuesTableView.rx.items) { (tv, row, item) -> UITableViewCell in
+            print("algo aconteceu")
+            
+            
+            let cell = self.issuesTableView.dequeueReusableCell(withIdentifier: "issueTableCell",for: IndexPath.init(row: row, section: 0)) as! IssueTableViewCell
+            
+            cell.titleLabel.text = item.title
+            cell.statusLabel.text = item.state
+            
+            return cell
+        }.disposed(by: disposeBag)
+            
+        
+    
+        viewModel.issues.subscribe(onNext:{ issues in
+            print("Issues came from viewModel after subscribing")
+            //print(issues)
+            self.issuesTableView.reloadData()
+        }).disposed(by: disposeBag)
+        
+        viewModel.getIssues()
+        
     }
     
 
@@ -28,3 +61,19 @@ class IssuesViewController: UIViewController {
     */
 
 }
+
+//extension IssuesViewController: UITableViewDelegate,UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = issuesTableView.dequeueReusableCell(withIdentifier: "issueTableCell", for: indexPath) as! IssueTableViewCell
+//
+//        cell.titleLabel.text = "title label asiaidhv"
+//        cell.statusLabel.text = "PENDING"
+//        return cell
+//    }
+//}
+

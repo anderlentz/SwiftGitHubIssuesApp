@@ -8,8 +8,11 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 class IssuesViewModel {
+        
+    var issues = PublishSubject<[Issue]>()
     
     var provider: MoyaProvider<GithubIssuesApi>!
     
@@ -17,22 +20,25 @@ class IssuesViewModel {
         self.provider = githubIssuesAPI
     }
     
-    func getIssues(completion: @escaping (Result<[Issue],Error>) -> Void) {
+    init(provider: MoyaProvider<GithubIssuesApi> = MoyaProvider<GithubIssuesApi>()) {
+        self.provider = provider
+    }
+    
+    func getIssues() {
         provider.request(.issues(page: 1)) { (result) in
             switch result {
             case .success(let response):
                 
                 do {
                     let results = try JSONDecoder().decode(Array<Issue>.self, from: response.data)
-                    print("Results: \(results)")
-                    completion(.success(results))
+                    self.issues.onNext(results)
                     
                 } catch let error {
-                    completion(.failure(error))
+                    print(error)
                 }
                 
             case .failure(let error):
-                completion(.failure(error))
+                print(error)
             }
         }
     }
