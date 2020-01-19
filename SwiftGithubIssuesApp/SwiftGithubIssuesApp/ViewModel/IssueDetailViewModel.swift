@@ -26,7 +26,6 @@ class IssueDetailViewModel {
         imageLoader.getImage(imageURl: issue.user.avatarURL) { (result) in
             switch result{
             case .success(let data):
-                print("veio a parada \n \(data)")
                 completion(data)
             case .failure(let err):
                 print("Error: \(err)")

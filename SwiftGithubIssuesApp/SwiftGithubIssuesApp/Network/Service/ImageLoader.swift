@@ -9,17 +9,27 @@
 import Foundation
 import Moya
 
+enum ImageLoaderError: Error{
+    case imageNotFound
+    case other
+}
+    
+
 class ImageLoader {
     
-    let imageLoaderAPI = MoyaProvider<ImageDownloaderAPI>()
+    var imageLoaderAPI: MoyaProvider<ImageDownloaderAPI>!
     
-    func getImage(imageURl: String,completion: @escaping (Result<Data, Error>)-> Void) {
+    init (imageProviderAPI: MoyaProvider<ImageDownloaderAPI> = MoyaProvider<ImageDownloaderAPI>()) {
+        self.imageLoaderAPI = imageProviderAPI
+    }
+    
+    func getImage(imageURl: String,completion: @escaping (Result<Data, ImageLoaderError>)-> Void) {
         imageLoaderAPI.request(.download(imageUrlString: imageURl)) { (result) in
             switch result {
             case .success(let response):
                 completion(.success(response.data))
-            case .failure(let error):
-                completion(.failure(error))
+            case .failure:
+                completion(.failure(.imageNotFound))
             }
         }
         

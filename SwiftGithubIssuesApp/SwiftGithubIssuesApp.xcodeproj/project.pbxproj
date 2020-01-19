@@ -31,6 +31,8 @@
 		A7DF303B23D3E74900C617DB /* IssueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF303A23D3E74900C617DB /* IssueDetailView.swift */; };
 		A7DF303D23D3F73000C617DB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF303C23D3F73000C617DB /* ImageLoader.swift */; };
 		A7DF303F23D3F8A900C617DB /* ImageDownloaderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF303E23D3F8A900C617DB /* ImageDownloaderAPI.swift */; };
+		A7DF304223D406B700C617DB /* ImageLoaderSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */; };
+		A7DF304423D40D8200C617DB /* IssuesDetailViewModelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */; };
 		ADD86CB4AC138DA84532B25C /* Pods_SwiftGithubIssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E1A09E469A5D15429F7D87 /* Pods_SwiftGithubIssuesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		A7DF303A23D3E74900C617DB /* IssueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailView.swift; sourceTree = "<group>"; };
 		A7DF303C23D3F73000C617DB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		A7DF303E23D3F8A900C617DB /* ImageDownloaderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderAPI.swift; sourceTree = "<group>"; };
+		A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderSpecs.swift; sourceTree = "<group>"; };
+		A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesDetailViewModelSpecs.swift; sourceTree = "<group>"; };
 		B2E1A09E469A5D15429F7D87 /* Pods_SwiftGithubIssuesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGithubIssuesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B753796A1049611125D29256 /* Pods-SwiftGithubIssuesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGithubIssuesAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftGithubIssuesAppTests/Pods-SwiftGithubIssuesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6B8C23BC008E58BEF598ACD /* Pods-SwiftGithubIssuesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGithubIssuesApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftGithubIssuesApp/Pods-SwiftGithubIssuesApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				A726F3BF23D381CC00DD8A07 /* IssuesViewModelSpecs.swift */,
+				A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 		A75BD5B923D37700002FE2CC /* SwiftGithubIssuesAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7DF304023D4069700C617DB /* ImageLoaderTests */,
 				A726F3C923D38DA100DD8A07 /* IssuesApiTests */,
 				A726F3BE23D3817800DD8A07 /* ViewModelTests */,
 				A75BD5BA23D37700002FE2CC /* SwiftGithubIssuesAppTests.swift */,
@@ -256,6 +262,14 @@
 				A7DF303A23D3E74900C617DB /* IssueDetailView.swift */,
 			);
 			path = xibs;
+			sourceTree = "<group>";
+		};
+		A7DF304023D4069700C617DB /* ImageLoaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */,
+			);
+			path = ImageLoaderTests;
 			sourceTree = "<group>";
 		};
 		DFD2585A0D4D57EC6760FC6D /* Frameworks */ = {
@@ -478,6 +492,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75BD5BB23D37700002FE2CC /* SwiftGithubIssuesAppTests.swift in Sources */,
+				A7DF304223D406B700C617DB /* ImageLoaderSpecs.swift in Sources */,
+				A7DF304423D40D8200C617DB /* IssuesDetailViewModelSpecs.swift in Sources */,
 				A726F3C023D381CC00DD8A07 /* IssuesViewModelSpecs.swift in Sources */,
 				A726F3CB23D38DBD00DD8A07 /* GithubIssuesApiSpecs.swift in Sources */,
 			);
