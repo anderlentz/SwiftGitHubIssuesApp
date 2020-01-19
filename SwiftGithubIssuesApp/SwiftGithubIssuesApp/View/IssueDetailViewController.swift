@@ -28,6 +28,16 @@ class IssueDetailViewController: UIViewController {
         descriptionLabel.text = viewModel.issue.body
         createdAtLabel.text = viewModel.issue.createdAt
         
+        //avatarImageView.image = UIImage(data: <#T##Data#>)
+        
+        viewModel.getAvatar { [weak self] (result) in
+            print("Result do avatar")
+            print(result)
+            
+            
+            self?.avatarImageView.image = UIImage(data: result)
+        }
+        
     }
     
     init?(coder: NSCoder,issueDetailViewModel: IssueDetailViewModel) {
