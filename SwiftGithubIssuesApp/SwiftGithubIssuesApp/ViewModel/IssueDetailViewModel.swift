@@ -11,10 +11,11 @@ import Foundation
 class IssueDetailViewModel {
     
     var issue: Issue!
-    let imageLoader = ImageLoader()
+    let imageLoader: ImageLoader!
     
-    init (issue: Issue) {
+    init (issue: Issue,imageLoader:ImageLoader = ImageLoader()) {
         self.issue = issue
+        self.imageLoader = imageLoader
     }
     
     func openGitHubLink() {
