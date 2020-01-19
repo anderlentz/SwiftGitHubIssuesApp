@@ -11,11 +11,23 @@ import UIKit
 class IssueDetailViewController: UIViewController {
     
     var viewModel: IssueDetailViewModel!
-
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    
+    @IBAction func openGithubIssueAction(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        titleLabel.text = viewModel.issue.title
+        descriptionLabel.text = viewModel.issue.body
+        createdAtLabel.text = viewModel.issue.createdAt
+        
     }
     
     init?(coder: NSCoder,issueDetailViewModel: IssueDetailViewModel) {

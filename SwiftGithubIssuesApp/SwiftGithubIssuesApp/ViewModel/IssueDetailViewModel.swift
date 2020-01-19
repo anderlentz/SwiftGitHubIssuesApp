@@ -15,4 +15,13 @@ class IssueDetailViewModel {
     init (issue: Issue) {
         self.issue = issue
     }
+    
+    func openGitHubLink() {
+        guard let url = URL(string: issue.url) else { return }
+        print(url.absoluteURL)
+    }
+    
+    func getAvatar(completion: @escaping (Result<Data,Error>) -> Void) {
+        
+    }
 }
