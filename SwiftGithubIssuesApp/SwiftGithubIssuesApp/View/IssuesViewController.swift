@@ -26,9 +26,7 @@ class IssuesViewController: UIViewController {
         //issuesTableView.rx.items(dataSource: <#T##_#>)
         
         viewModel.issues.bind(to: issuesTableView.rx.items) { (tv, row, item) -> UITableViewCell in
-            print("algo aconteceu")
-            
-            
+                        
             let cell = self.issuesTableView.dequeueReusableCell(withIdentifier: "issueTableCell",for: IndexPath.init(row: row, section: 0)) as! IssueTableViewCell
             
             cell.titleLabel.text = item.title
@@ -38,12 +36,23 @@ class IssuesViewController: UIViewController {
         }.disposed(by: disposeBag)
             
         
+        issuesTableView.rx.modelSelected(Issue.self)
+            .subscribe(onNext: {issue in
+                guard let issueDetailVC = self.storyboard?.instantiateViewController(identifier: "IssueDetailViewController", creator: { coder in
+                    let issueDetailViewModel = IssueDetailViewModel(issue: issue)
+                    return IssueDetailViewController(coder: coder, issueDetailViewModel: issueDetailViewModel)
+                }) else {return}
+                
+                self.navigationController?.pushViewController(issueDetailVC, animated: true)
+            }
+        ).disposed(by: disposeBag)
+        
     
-        viewModel.issues.subscribe(onNext:{ issues in
-            print("Issues came from viewModel after subscribing")
-            //print(issues)
-            self.issuesTableView.reloadData()
-        }).disposed(by: disposeBag)
+//        viewModel.issues.subscribe(onNext:{ issues in
+//            print("Issues came from viewModel after subscribing")
+//            //print(issues)
+//            self.issuesTableView.reloadData()
+//        }).disposed(by: disposeBag)
         
         viewModel.getIssues()
         

@@ -76,7 +76,6 @@
                     <navigationItem key="navigationItem" title="Issues" id="9ek-Qw-uP1"/>
                     <connections>
                         <outlet property="issuesTableView" destination="N7n-c4-bxj" id="JkL-Zo-g08"/>
-                        <segue destination="aBf-Vr-dzE" kind="show" id="xlq-2U-iQL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
