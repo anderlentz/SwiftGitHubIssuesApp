@@ -19,13 +19,54 @@ class IssuesDetailViewModelSpecs: QuickSpec {
     var viewModel: IssueDetailViewModel!
     
     override func spec() {
-        describe("An initialized viewModel") {
-            context("When can not load an avatar") {
-                viewModel = IssueDetailViewModel(issue: <#T##Issue#>)
-                it("should return an avatar from assets") {
-                    
+        
+        describe("An initialized viewModel with an non-empty issue") {
+            
+            let fakeIssue = FakeData().issue!
+            viewModel = IssueDetailViewModel(issue: fakeIssue)
+            
+            context("When get title") {
+               
+                it("should return a not formatted issue title") {
+                    self.viewModel.getTitle { title in
+                        expect(title).to(equal("build: simplify, inline tool version recording"))
+                    }
+                }
+            }
+            
+            context("When get issue description ") {
+               
+                it("should return a not formatted issue description") {
+                    self.viewModel.getIssueDescription{ description in
+                        expect(description).to(equal(fakeIssue.body))
+                    }
+                }
+            }
+            
+            context("When get a non-empty issue creation date") {
+               
+                it("should return a not formatted issue date") {
+                    self.viewModel.getIssueCreationDate { date in
+                        expect(date).to(equal("2020-01-18T18:23:46Z"))
+                    }
+                }
+            }
+            
+            context("When get nil creation date") {
+                
+                beforeEach {
+                    var fakeIssue = FakeData().issue!
+                    fakeIssue.createdAt = nil
+                    self.viewModel = IssueDetailViewModel(issue: fakeIssue)
+                }
+               
+                it("should return an empty String") {
+                    self.viewModel.getIssueCreationDate { date in
+                        expect(date).to(equal(""))
+                    }
                 }
             }
         }
     }
+    
 }

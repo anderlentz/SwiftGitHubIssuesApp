@@ -31,7 +31,7 @@ struct Issue: Codable {
     let assignees: [JSONAny]
     let milestone: JSONNull?
     let comments: Int
-    let createdAt, updatedAt: String?
+    var createdAt, updatedAt: String?
     let closedAt: JSONNull?
     let authorAssociation: String
     let pullRequest: PullRequest

@@ -33,6 +33,7 @@
 		A7DF303F23D3F8A900C617DB /* ImageDownloaderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF303E23D3F8A900C617DB /* ImageDownloaderAPI.swift */; };
 		A7DF304223D406B700C617DB /* ImageLoaderSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */; };
 		A7DF304423D40D8200C617DB /* IssuesDetailViewModelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */; };
+		A7DF304823D4D98700C617DB /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304723D4D98700C617DB /* FakeData.swift */; };
 		ADD86CB4AC138DA84532B25C /* Pods_SwiftGithubIssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E1A09E469A5D15429F7D87 /* Pods_SwiftGithubIssuesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		A7DF303E23D3F8A900C617DB /* ImageDownloaderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderAPI.swift; sourceTree = "<group>"; };
 		A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderSpecs.swift; sourceTree = "<group>"; };
 		A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesDetailViewModelSpecs.swift; sourceTree = "<group>"; };
+		A7DF304723D4D98700C617DB /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		B2E1A09E469A5D15429F7D87 /* Pods_SwiftGithubIssuesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGithubIssuesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B753796A1049611125D29256 /* Pods-SwiftGithubIssuesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGithubIssuesAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftGithubIssuesAppTests/Pods-SwiftGithubIssuesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6B8C23BC008E58BEF598ACD /* Pods-SwiftGithubIssuesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGithubIssuesApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftGithubIssuesApp/Pods-SwiftGithubIssuesApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				A726F3BF23D381CC00DD8A07 /* IssuesViewModelSpecs.swift */,
 				A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */,
+				A7DF304723D4D98700C617DB /* FakeData.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7DF304823D4D98700C617DB /* FakeData.swift in Sources */,
 				A75BD5BB23D37700002FE2CC /* SwiftGithubIssuesAppTests.swift in Sources */,
 				A7DF304223D406B700C617DB /* ImageLoaderSpecs.swift in Sources */,
 				A7DF304423D40D8200C617DB /* IssuesDetailViewModelSpecs.swift in Sources */,
