@@ -118,9 +118,9 @@
 		A726F3B523D37D7100DD8A07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A7DF303123D3B34E00C617DB /* xibs */,
 				A726F3BA23D37FAC00DD8A07 /* IssueDetailViewController.swift */,
 				A726F3BC23D3808900DD8A07 /* IssuesViewController.swift */,
+				A7DF303123D3B34E00C617DB /* xibs */,
 			);
 			path = View;
 			sourceTree = "<group>";

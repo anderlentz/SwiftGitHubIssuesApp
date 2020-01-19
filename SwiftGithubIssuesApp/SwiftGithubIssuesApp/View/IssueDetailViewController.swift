@@ -23,19 +23,21 @@ class IssueDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        titleLabel.text = viewModel.issue.title
-        descriptionLabel.text = viewModel.issue.body
-        createdAtLabel.text = viewModel.issue.createdAt
-        
-        //avatarImageView.image = UIImage(data: <#T##Data#>)
         
         viewModel.getAvatar { [weak self] (result) in
-            print("Result do avatar")
-            print(result)
-            
-            
             self?.avatarImageView.image = UIImage(data: result)
+        }
+        
+        viewModel.getTitle { [weak self ]title in
+            self?.titleLabel.text = title
+        }
+        
+        viewModel.getIssueDescription { [weak self] description in
+            self?.descriptionLabel.text = description
+        }
+        
+        viewModel.getIssueCreationDate { [weak self] date in
+            self?.createdAtLabel.text = date
         }
         
     }

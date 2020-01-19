@@ -46,4 +46,22 @@ class IssueDetailViewModel {
             }
         }
     }
+    
+    func getTitle(completion: @escaping (String) -> Void) {
+        completion(issue.title)
+    }
+    
+    func getIssueDescription(completion: @escaping (String) -> Void) {
+        completion(issue.body)
+    }
+    
+    func getIssueCreationDate(completion: @escaping (String) -> Void) {
+        
+        if let createdAt = issue.createdAt {
+            completion(createdAt)
+        } else {
+            completion("")
+        }
+        
+    }
 }
