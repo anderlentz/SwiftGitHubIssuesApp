@@ -40,8 +40,6 @@ class IssueDetailViewModel {
                     print("Error loading image data")
                     print(error)
                 }
-                
-                //UIImage(named: "green-square-Retina")
                 completion(Data())
             }
         }

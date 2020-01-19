@@ -48,17 +48,7 @@ extension GithubIssuesApi: TargetType {
                 
             do {
                  let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-//                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-//
-//                print(jsonResult)
-//
-//                let results = try JSONDecoder().decode(Array<Issue>.self, from: data)
-//
-//
-//
-//                print("PASSOU === \n")
-                
-//                print(results)
+
                 return data
             } catch let error{
                 print("Error \(error)")
