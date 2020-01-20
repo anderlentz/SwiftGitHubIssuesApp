@@ -34,6 +34,13 @@
 		A7DF304223D406B700C617DB /* ImageLoaderSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */; };
 		A7DF304423D40D8200C617DB /* IssuesDetailViewModelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */; };
 		A7DF304823D4D98700C617DB /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304723D4D98700C617DB /* FakeData.swift */; };
+		A7DF304B23D4FA2400C617DB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304A23D4FA2400C617DB /* Coordinator.swift */; };
+		A7DF304D23D4FEE400C617DB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF304C23D4FEE400C617DB /* AppCoordinator.swift */; };
+		A7DF305223D502F200C617DB /* MyIssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF305023D502F200C617DB /* MyIssuesViewController.swift */; };
+		A7DF305323D502F200C617DB /* MyIssuesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7DF305123D502F200C617DB /* MyIssuesViewController.xib */; };
+		A7DF305523D5134C00C617DB /* IssueDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF305423D5134C00C617DB /* IssueDetailCoordinator.swift */; };
+		A7DF305823D5156100C617DB /* MyIssueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF305623D5156100C617DB /* MyIssueDetailsViewController.swift */; };
+		A7DF305923D5156100C617DB /* MyIssueDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7DF305723D5156100C617DB /* MyIssueDetailsViewController.xib */; };
 		ADD86CB4AC138DA84532B25C /* Pods_SwiftGithubIssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E1A09E469A5D15429F7D87 /* Pods_SwiftGithubIssuesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +87,13 @@
 		A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderSpecs.swift; sourceTree = "<group>"; };
 		A7DF304323D40D8200C617DB /* IssuesDetailViewModelSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesDetailViewModelSpecs.swift; sourceTree = "<group>"; };
 		A7DF304723D4D98700C617DB /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		A7DF304A23D4FA2400C617DB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A7DF304C23D4FEE400C617DB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A7DF305023D502F200C617DB /* MyIssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIssuesViewController.swift; sourceTree = "<group>"; };
+		A7DF305123D502F200C617DB /* MyIssuesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIssuesViewController.xib; sourceTree = "<group>"; };
+		A7DF305423D5134C00C617DB /* IssueDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailCoordinator.swift; sourceTree = "<group>"; };
+		A7DF305623D5156100C617DB /* MyIssueDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIssueDetailsViewController.swift; sourceTree = "<group>"; };
+		A7DF305723D5156100C617DB /* MyIssueDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIssueDetailsViewController.xib; sourceTree = "<group>"; };
 		B2E1A09E469A5D15429F7D87 /* Pods_SwiftGithubIssuesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGithubIssuesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B753796A1049611125D29256 /* Pods-SwiftGithubIssuesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGithubIssuesAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftGithubIssuesAppTests/Pods-SwiftGithubIssuesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6B8C23BC008E58BEF598ACD /* Pods-SwiftGithubIssuesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGithubIssuesApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftGithubIssuesApp/Pods-SwiftGithubIssuesApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +137,10 @@
 				A726F3BA23D37FAC00DD8A07 /* IssueDetailViewController.swift */,
 				A726F3BC23D3808900DD8A07 /* IssuesViewController.swift */,
 				A7DF303123D3B34E00C617DB /* xibs */,
+				A7DF305023D502F200C617DB /* MyIssuesViewController.swift */,
+				A7DF305123D502F200C617DB /* MyIssuesViewController.xib */,
+				A7DF305623D5156100C617DB /* MyIssueDetailsViewController.swift */,
+				A7DF305723D5156100C617DB /* MyIssueDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +249,7 @@
 		A75BD5A223D376FE002FE2CC /* SwiftGithubIssuesApp */ = {
 			isa = PBXGroup;
 			children = (
+				A7DF304923D4FA0A00C617DB /* Coordinator */,
 				A726F3C323D3854700DD8A07 /* Network */,
 				A726F3B823D37DA400DD8A07 /* Model */,
 				A726F3B523D37D7100DD8A07 /* View */,
@@ -273,6 +292,16 @@
 				A7DF304123D406B700C617DB /* ImageLoaderSpecs.swift */,
 			);
 			path = ImageLoaderTests;
+			sourceTree = "<group>";
+		};
+		A7DF304923D4FA0A00C617DB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A7DF304A23D4FA2400C617DB /* Coordinator.swift */,
+				A7DF304C23D4FEE400C617DB /* AppCoordinator.swift */,
+				A7DF305423D5134C00C617DB /* IssueDetailCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		DFD2585A0D4D57EC6760FC6D /* Frameworks */ = {
@@ -371,8 +400,10 @@
 			files = (
 				A75BD5B023D37700002FE2CC /* LaunchScreen.storyboard in Resources */,
 				A7DF303523D3B37200C617DB /* IssueTableViewCell.xib in Resources */,
+				A7DF305923D5156100C617DB /* MyIssueDetailsViewController.xib in Resources */,
 				A75BD5AD23D37700002FE2CC /* Assets.xcassets in Resources */,
 				A75BD5AB23D376FE002FE2CC /* Main.storyboard in Resources */,
+				A7DF305323D502F200C617DB /* MyIssuesViewController.xib in Resources */,
 				A7DF303923D3E49700C617DB /* IssueView.xib in Resources */,
 				A726F3CC23D3943C00DD8A07 /* issues.json in Resources */,
 			);
@@ -475,14 +506,19 @@
 			files = (
 				A726F3C223D3837800DD8A07 /* IssuesViewModel.swift in Sources */,
 				A7DF303423D3B37200C617DB /* IssueTableViewCell.swift in Sources */,
+				A7DF304B23D4FA2400C617DB /* Coordinator.swift in Sources */,
 				A726F3CE23D3985B00DD8A07 /* Issue.swift in Sources */,
+				A7DF305223D502F200C617DB /* MyIssuesViewController.swift in Sources */,
+				A7DF304D23D4FEE400C617DB /* AppCoordinator.swift in Sources */,
 				A726F3D223D39A6F00DD8A07 /* GithubIssuesServiceProtocol.swift in Sources */,
+				A7DF305823D5156100C617DB /* MyIssueDetailsViewController.swift in Sources */,
 				A726F3BD23D3808900DD8A07 /* IssuesViewController.swift in Sources */,
 				A726F3BB23D37FAC00DD8A07 /* IssueDetailViewController.swift in Sources */,
 				A75BD5A423D376FE002FE2CC /* AppDelegate.swift in Sources */,
 				A7DF303B23D3E74900C617DB /* IssueDetailView.swift in Sources */,
 				A75BD5A623D376FE002FE2CC /* SceneDelegate.swift in Sources */,
 				A726F3C623D3856D00DD8A07 /* GithubIssuesAPI.swift in Sources */,
+				A7DF305523D5134C00C617DB /* IssueDetailCoordinator.swift in Sources */,
 				A726F3D423D39AE100DD8A07 /* GithubIssuesService.swift in Sources */,
 				A7DF303F23D3F8A900C617DB /* ImageDownloaderAPI.swift in Sources */,
 				A7DF303723D3D9AF00C617DB /* IssueDetailViewModel.swift in Sources */,

@@ -24,11 +24,12 @@ class IssuesViewModelSpecs: QuickSpec {
                     let issuesAPI = MoyaProvider<GithubIssuesApi>(stubClosure: MoyaProvider.immediatelyStub)
                     self.issuesViewModel = IssuesViewModel(githubIssuesAPI: issuesAPI)
                 }
-                
-                
-                
-                it("should parse json into array containing one issue"){
+
+                it("should parse json into array containing 1 issue"){
                     
+//                    self.issuesViewModel.getIssues()
+                    
+                    //self.issuesViewModel.issues.on(Event<[Issue]>)
                     
 //                    self.issuesViewModel.getIssues(){ result in
 //                        switch result {
