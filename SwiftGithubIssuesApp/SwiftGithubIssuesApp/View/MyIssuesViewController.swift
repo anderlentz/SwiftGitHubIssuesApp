@@ -12,14 +12,26 @@ import RxCocoa
 
 class MyIssuesViewController: UIViewController {
     
-    let viewModel = IssuesViewModel()
+    let viewModel: IssuesViewModel!
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var issuesTableView: UITableView!
     
     
+    init?(viewModel: IssuesViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let cell = UINib.init(nibName: "IssueTableViewCell", bundle: Bundle.main)
         
@@ -36,17 +48,10 @@ class MyIssuesViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         
-        issuesTableView.rx.modelSelected(Issue.self)
-            .subscribe(onNext: {issue in
-                guard let issueDetailVC = self.storyboard?.instantiateViewController(identifier: "IssueDetailViewController", creator: { coder in
-                    let issueDetailViewModel = IssueDetailViewModel(issue: issue)
-                    return IssueDetailViewController(coder: coder, issueDetailViewModel: issueDetailViewModel)
-                }) else {return}
-                
-                
-                self.navigationController?.pushViewController(issueDetailVC, animated: true)
-            }
-        ).disposed(by: disposeBag)
+        issuesTableView.rx
+            .modelSelected(Issue.self)
+            .bind(to: viewModel.selectedIssue)
+            .disposed(by: disposeBag)
         
         viewModel.getIssues()
         

@@ -9,10 +9,31 @@
 import Foundation
 import UIKit
 
-final class AppCoordinator: Coordinator {
+class AppCoordinator: Coordinator {
+
+    var navigationController: UINavigationController?
+    
+    init(navigationController: UINavigationController?) {
+        self.navigationController = navigationController
+    }
     
     func start() {
-        let viewController = MyIssuesViewController()
+
+        let viewModel = IssuesViewModel(navigationCoordinator: self)
+        
+        guard let viewController = MyIssuesViewController(viewModel: viewModel) else { return }
+        
+        viewController.title = "Issues"
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func performTransition(transition: Transition) {
+        switch transition {
+        case .showIssueDetails(let issue):
+
+            let issueDetailCoordnator = IssueDetailCoordinator(navController: navigationController, selectedIssue: issue)
+            issueDetailCoordnator.start()
+            
+        }
     }
 }

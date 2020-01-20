@@ -13,15 +13,31 @@ import RxSwift
 class IssuesViewModel {
         
     var issues = PublishSubject<[Issue]>()
-    
+    var selectedIssue = PublishSubject<Issue>()
     var provider: MoyaProvider<GithubIssuesApi>!
+
+    var navigationCoordinator: Coordinator?
     
-    init(githubIssuesAPI: MoyaProvider<GithubIssuesApi>) {
+    private let disposeBag = DisposeBag()
+    
+    init(githubIssuesAPI: MoyaProvider<GithubIssuesApi>,navigationCoordinator:  Coordinator?) {
         self.provider = githubIssuesAPI
+        self.navigationCoordinator = navigationCoordinator
+        self.setup()
     }
     
-    init(provider: MoyaProvider<GithubIssuesApi> = MoyaProvider<GithubIssuesApi>()) {
+    init(provider: MoyaProvider<GithubIssuesApi> = MoyaProvider<GithubIssuesApi>(), navigationCoordinator: Coordinator?) {
         self.provider = provider
+        self.navigationCoordinator = navigationCoordinator
+        self.setup()
+    }
+    
+    private func setup() {
+        selectedIssue.asObservable()
+            .subscribe(onNext: { issue  in
+                self.navigationCoordinator?.performTransition(transition: .showIssueDetails(issue))
+            })
+        .disposed(by: disposeBag)
     }
     
     func getIssues() {

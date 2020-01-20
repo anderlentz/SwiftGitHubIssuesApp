@@ -9,22 +9,46 @@
 import UIKit
 
 class MyIssueDetailViewController: UIViewController {
+    
+    // MARK: - Properties
+    var viewModel: IssueDetailViewModel!
 
+    // MARK: - Outlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    // MARK: - IBActions
+    @IBAction func openGithubLinkAction(_ sender: Any) {
+    }
+    
+    init?(issueDetailViewModel: IssueDetailViewModel) {
+        self.viewModel = issueDetailViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("Not implemwnted")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        viewModel.getAvatar { [weak self] (result) in
+            self?.avatarImageView.image = UIImage(data: result)
+        }
+        
+        viewModel.getTitle { [weak self ]title in
+            self?.titleLabel.text = title
+        }
+        
+        viewModel.getIssueDescription { [weak self] description in
+            self?.descriptionLabel.text = description
+        }
+        
+        viewModel.getIssueCreationDate { [weak self] date in
+            self?.createdAtLabel.text = date
+        }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class Coordinator {
-    var childCoordinators: [Coordinator] = []
-    weak var navigationController: UINavigationController?
+enum Transition {
+    case showIssueDetails(Issue)
+}
+
+protocol Coordinator: class {
+    var navigationController: UINavigationController? { get set }
+    func start()
     
-    init(navigationController: UINavigationController?) {
-        self.navigationController = navigationController
-        
-    }
+    func performTransition(transition: Transition)
 }

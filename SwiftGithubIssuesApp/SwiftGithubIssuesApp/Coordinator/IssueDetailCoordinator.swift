@@ -7,11 +7,29 @@
 //
 
 import Foundation
+import UIKit
 
 final class IssueDetailCoordinator: Coordinator {
+    
+    var navigationController: UINavigationController?
+    var selectedIssue: Issue!
+    
+    init(navController: UINavigationController?, selectedIssue: Issue) {
+        self.navigationController = navController
+        self.selectedIssue = selectedIssue
+    }
+
     func start() {
+        let viewModel = IssueDetailViewModel(issue: selectedIssue)
         
-        let viewController = MyIssueDetailsViewController()
+        guard let viewController = MyIssueDetailViewController(issueDetailViewModel: viewModel) else { return }
+        
+        viewController.title = "Details"
+        
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func performTransition(transition: Transition) {
+        
     }
 }
