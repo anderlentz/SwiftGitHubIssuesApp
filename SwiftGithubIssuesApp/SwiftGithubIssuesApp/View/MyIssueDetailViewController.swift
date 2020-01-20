@@ -1,25 +1,15 @@
 //
-//  MyIssueDetailsViewController.swift
+//  MyIssueDetailViewController.swift
 //  SwiftGithubIssuesApp
 //
-//  Created by Anderson on 19/01/20.
+//  Created by Anderson on 20/01/20.
 //  Copyright © 2020 Anderson. All rights reserved.
 //
 
 import UIKit
 
-class MyIssueDetailsViewController: UIViewController {
-    
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var createdAtLabel: UILabel!
-    @IBOutlet weak var avatarImageView: UIImageView!
-    
-    
-    @IBAction func openGithubButton(_ sender: Any) {
-    }
-    
+class MyIssueDetailViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
